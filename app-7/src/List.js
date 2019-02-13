@@ -1,12 +1,21 @@
 
 import React from 'react';
+import Todo from './Todo.js';
+
 
 
 
 function List(props) {
-    return (
+    let displayList = props.listItems.map( ( elm, i ) => {
+        return (
+            <Todo key={ i } todos={ elm } />
+        )
+    });
 
-        <h2> {props.addToList} </h2>
+    return (
+       <div>
+           { displayList }
+       </div> 
     );
 }
 
