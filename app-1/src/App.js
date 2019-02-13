@@ -1,44 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = { value: '' };
+  constructor() {
+    super();
+    this.state = {
+      text: ""
+    }
     this.handleChange = this.handleChange.bind(this);
-
   }
 
-  handleChange(event){
-    this.setState({value: event.target.value});
+  handleChange(event) {
+    this.setState( { text: event.target.value } )
   }
-
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <img href="https://via.placeholder.com/150" alt="logo" />
+          <h2>Welcome Stuff</h2>
         </div>
-        <form>
-          < input onChange={this.handleChange} label="type something" type="text" />
-        </form>
-        <Output typing={this.state.value}/>
-        {/* <p>{this.state.value}</p> */}
-        {/* this works too, but I wanted to use a function for practice */}
-
+        <label> Text Input Field
+          <input type={"text"} maxLength="50" value={ this.state.text } onChange={ this.handleChange } />
+        </label>
+        <div className="text-output" >
+          <h1> {this.state.text} </h1>
+        </div>
+        
       </div>
     );
   }
 }
-
-function Output(props){
-  return <p>{props.typing}</p>
-}
-
 
 
 export default App;

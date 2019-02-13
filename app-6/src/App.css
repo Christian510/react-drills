@@ -1,16 +1,13 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  width: 100%;
+  height: 100%;
 }
 
 .App-header {
   background-color: #222;
   height: 150px;
-  padding: 20px;
+  padding-top: 20px;
   color: white;
 }
 
@@ -18,7 +15,24 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.input {
+  padding-top: 25px;
 }
+
+.container {
+  background-image: url(https://source.unsplash.com/user/emmamatthews);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  width: 350px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #F5DEB3;
+}
+/* Here is an article you should checkout on how to give a background image opacity without effecting other content */
+/* https://love2dev.com/blog/responsive-hero-background-opacity/ */
+/* https://www.designcise.com/web/tutorial/how-to-apply-css-opacity-to-background-color-only */
